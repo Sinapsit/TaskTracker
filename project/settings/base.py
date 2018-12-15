@@ -49,6 +49,7 @@ CONTRIB_APPS = [
 ]
 
 PROJECT_APPS = [
+    'account',
     'register',
 ]
 
@@ -123,6 +124,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Account settings
+AUTH_USER_MODEL = 'account.User'
+LOGIN_URL = 'admin:login'
+LOGOUT_URL = 'admin:logout'
 
 
 # Internationalization
