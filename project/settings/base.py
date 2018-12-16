@@ -17,6 +17,7 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, '..'))
+PUBLIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '..', 'media'))
 
 # # insert apps and libs dirs to sys.path
 for path in ('apps', 'libs'):
@@ -54,7 +55,9 @@ PROJECT_APPS = [
 ]
 
 EXTERNAL_APPS = [
-
+    'rest_framework',
+    'rest_framework_swagger',
+    'django_filters',
 ]
 
 
@@ -148,4 +151,46 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+STATIC_ROOT = os.path.join(PUBLIC_ROOT, 'static')
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(PUBLIC_ROOT, 'media')
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
+
+FILE_UPLOAD_PERMISSIONS = 0o644
+
+# Django Rest Swagger
+SWAGGER_SETTINGS = {
+    'JSON_EDITOR': False,
+    'SHOW_REQUEST_HEADERS': True,
+    'SECURITY_DEFINITIONS': {
+        'api_key': {
+            'type': 'apiKey',
+            'description': 'Token authorization',
+            'name': 'Authorization',
+            'in': 'header',
+        }
+    },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
+    'COERCE_DECIMAL_TO_STRING': False,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    ),
+}
+
+REST_DATE_FORMAT = '%m-%d-%Y'
+REST_DATETIME_FORMAT = '%m-%d-%Y %H:%M:%S'
