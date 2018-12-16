@@ -17,10 +17,17 @@ class UserSerializer(serializers.ModelSerializer):
 
 class TaskDescriptionsSerializer(serializers.ModelSerializer):
     """Task descriptions serializer."""
+    task_id = serializers.PrimaryKeyRelatedField(
+        queryset=models.Task.objects.all(),
+        source='task',
+        write_only=True
+    )
+
     class Meta:
         model = models.TaskDescription
         fields = [
             'id',
+            'task_id',
             'text'
         ]
 

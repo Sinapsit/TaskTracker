@@ -65,3 +65,9 @@ class ProjectCreateView(generics.CreateAPIView):
     serializer_class = serializers.ProjectSerializers
     pagination_class = None
     queryset = models.TaskProject.objects.all()
+
+class DescriptionCreateView(generics.CreateAPIView):
+    """Description create view."""
+    serializer_class = serializers.TaskDescriptionsSerializer
+    pagination_class = None
+    queryset = models.TaskDescription.objects.all()

@@ -1,2 +1,2 @@
 # TaskTracker
-Django приложение, которое представляет API для учета задач (Task Tracker).
+Django приложение, которое предоставляет API для учета задач (Task Tracker).

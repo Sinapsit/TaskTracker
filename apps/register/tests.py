@@ -101,3 +101,15 @@ class BaseRegisterTestAPI(TestCase):
         url = reverse('comment_create')
         response = self.client.post(url, data=data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    def test_description_create(self):
+        """
+        Ensure we can create description.
+        """
+        data = {
+            'text': 'For technical task.',
+            'task_id': self.task.id,
+        }
+        url = reverse('description_create')
+        response = self.client.post(url, data=data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
