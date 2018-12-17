@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-17 12:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: apps/account/admin.py:22
+msgid "Personal info"
+msgstr "Персональная информация"
+
+#: apps/account/admin.py:23
+msgid "Important dates"
+msgstr "Важные даты"
+
+#: apps/account/admin.py:24
+msgid "Permissions"
+msgstr "Прова доступа"
+
+#: apps/account/admin.py:42
+msgid "Name"
+msgstr "Имя"
+
+#: apps/account/apps.py:10
+msgid "Account"
+msgstr "Учетная запись"
+
+#: apps/account/models.py:22
+msgid "Patronymic"
+msgstr "Отчество"
+
+#: apps/account/models.py:27
+msgid "User"
+msgstr "Пользователь"
+
+#: apps/account/models.py:28
+msgid "Users"
+msgstr "Пользователи"
+
+#: apps/register/apps.py:10
+msgid "Register"
+msgstr "Регистрационный журнал"
+
+#: apps/register/filters.py:13 apps/register/models.py:23
+#: apps/register/models.py:70
+msgid "Title"
+msgstr "Наименование"
+
+#: apps/register/models.py:17
+msgid "To Do"
+msgstr "К выполнению"
+
+#: apps/register/models.py:18
+msgid "In Progress"
+msgstr "В работе"
+
+#: apps/register/models.py:19
+msgid "Done"
+msgstr "Выполненно"
+
+#: apps/register/models.py:26
+msgid "Status"
+msgstr "Статус"
+
+#: apps/register/models.py:29 apps/register/models.py:79
+msgid "Author"
+msgstr "Автор"
+
+#: apps/register/models.py:33
+msgid "Executor"
+msgstr "Исполнитель"
+
+#: apps/register/models.py:38
+msgid "Project"
+msgstr "Проект"
+
+#: apps/register/models.py:43 apps/register/models.py:57
+#: apps/register/models.py:82
+msgid "Task"
+msgstr "Задача"
+
+#: apps/register/models.py:44
+msgid "Tasks"
+msgstr "Задачи"
+
+#: apps/register/models.py:60 apps/register/models.py:85
+msgid "Text"
+msgstr "Текст"
+
+#: apps/register/models.py:63
+msgid "Description"
+msgstr "Описание"
+
+#: apps/register/models.py:64
+msgid "Descriptions"
+msgstr "Описания"
+
+#: apps/register/models.py:73
+msgid "Task project"
+msgstr "Проект задач"
+
+#: apps/register/models.py:74
+msgid "Task projects"
+msgstr "Проекты задач"
+
+#: apps/register/models.py:88
+msgid "Comment"
+msgstr "Комментарий"
+
+#: apps/register/models.py:89
+msgid "Comments"
+msgstr "Комментарии"
+
+#: apps/utils/mixins.py:13
+msgid "Date created"
+msgstr "Дата создания"
+
+#: apps/utils/mixins.py:15
+msgid "Date updated"
+msgstr "Дата изменения"
